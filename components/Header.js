@@ -11,9 +11,14 @@ export default function Header({ onRefresh, selectedDepartment, onDepartmentChan
         <div className="flex items-center gap-5">
           <Link href="/" className="flex items-center space-x-2">
             <span className="text-4xl">🐕</span>
-            <h1 className="text-2xl font-extrabold text-white tracking-wide drop-shadow">
-              Adopciones Caninas
-            </h1>
+            <div>
+              <h1 className="text-2xl font-extrabold text-white tracking-wide drop-shadow">
+                SalvemosPatitas.org
+              </h1>
+              <p className="text-xs text-white/90 -mt-1">
+                La red de rescatistas/organizacion de animales en Perú
+              </p>
+            </div>
           </Link>
 
           {/* Selector de departamento */}
@@ -23,26 +28,25 @@ export default function Header({ onRefresh, selectedDepartment, onDepartmentChan
           />
         </div>
 
-        {/* Navegación */}
-        <nav className="flex items-center space-x-6">
+        {/* Barra de búsqueda + Navegación */}
+        <nav className="flex items-center gap-3 sm:gap-4">
+
+
+          {/* Links de navegación */}
           <Link 
-            href="/adopcion" 
+            href="/organizaciones" 
             className="text-white/90 hover:text-yellow-200 font-semibold transition-colors"
           >
-            🐶 Perritos
+            🏥 Organizaciones
           </Link>
+
           <Link 
             href="/contacto" 
             className="text-white/90 hover:text-yellow-200 font-semibold transition-colors"
           >
             📩 Contáctanos
           </Link>
-          <Link 
-            href="/organizaciones" 
-            className="bg-yellow-300 text-gray-900 px-4 py-2 rounded-lg font-semibold hover:bg-yellow-400 transition"
-          >
-            🏥 Registrar Organización
-          </Link>
+ 
         </nav>
       </div>
     </header>
