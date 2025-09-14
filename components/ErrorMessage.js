@@ -7,7 +7,7 @@ export default function ErrorMessage({ error, onRetry }) {
         <h2 className="text-xl font-bold text-red-600 mb-4">Error al cargar datos</h2>
         <p className="text-gray-600 mb-4">{error}</p>
         <p className="text-sm text-gray-500">
-          Revisa la variable NEXT_PUBLIC_GITHUB_REPO o que el repo exista
+          Verifica que los datos existen
         </p>
         <button 
           onClick={onRetry} 
