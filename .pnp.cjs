@@ -27,6 +27,7 @@ const RAW_RUNTIME_STATE =
       [null, {\
         "packageLocation": "./",\
         "packageDependencies": [\
+          ["@next/font", "virtual:3d4bd3b9e14ff5358e4e834bad6ff1b93017383daf5c271a89da78cc55d6a6f0fdcfe7a9fd180bab2f88a2bd5a5496c600a6dedc517851b67f45b8c2bd88f901#npm:14.2.15"],\
           ["@tailwindcss/typography", "virtual:3d4bd3b9e14ff5358e4e834bad6ff1b93017383daf5c271a89da78cc55d6a6f0fdcfe7a9fd180bab2f88a2bd5a5496c600a6dedc517851b67f45b8c2bd88f901#npm:0.5.16"],\
           ["autoprefixer", "virtual:3d4bd3b9e14ff5358e4e834bad6ff1b93017383daf5c271a89da78cc55d6a6f0fdcfe7a9fd180bab2f88a2bd5a5496c600a6dedc517851b67f45b8c2bd88f901#npm:10.4.17"],\
           ["next", "virtual:3d4bd3b9e14ff5358e4e834bad6ff1b93017383daf5c271a89da78cc55d6a6f0fdcfe7a9fd180bab2f88a2bd5a5496c600a6dedc517851b67f45b8c2bd88f901#npm:14.2.5"],\
@@ -128,6 +129,28 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "../../.yarn/berry/cache/@next-env-npm-14.2.5-49076f5af2-10c0.zip/node_modules/@next/env/",\
         "packageDependencies": [\
           ["@next/env", "npm:14.2.5"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@next/font", [\
+      ["npm:14.2.15", {\
+        "packageLocation": "../../.yarn/berry/cache/@next-font-npm-14.2.15-6b0487ed83-10c0.zip/node_modules/@next/font/",\
+        "packageDependencies": [\
+          ["@next/font", "npm:14.2.15"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["virtual:3d4bd3b9e14ff5358e4e834bad6ff1b93017383daf5c271a89da78cc55d6a6f0fdcfe7a9fd180bab2f88a2bd5a5496c600a6dedc517851b67f45b8c2bd88f901#npm:14.2.15", {\
+        "packageLocation": "./.yarn/__virtual__/@next-font-virtual-a1f1f58a0f/3/.yarn/berry/cache/@next-font-npm-14.2.15-6b0487ed83-10c0.zip/node_modules/@next/font/",\
+        "packageDependencies": [\
+          ["@next/font", "virtual:3d4bd3b9e14ff5358e4e834bad6ff1b93017383daf5c271a89da78cc55d6a6f0fdcfe7a9fd180bab2f88a2bd5a5496c600a6dedc517851b67f45b8c2bd88f901#npm:14.2.15"],\
+          ["@types/next", null],\
+          ["next", "virtual:3d4bd3b9e14ff5358e4e834bad6ff1b93017383daf5c271a89da78cc55d6a6f0fdcfe7a9fd180bab2f88a2bd5a5496c600a6dedc517851b67f45b8c2bd88f901#npm:14.2.5"]\
+        ],\
+        "packagePeers": [\
+          "@types/next",\
+          "next"\
         ],\
         "linkType": "HARD"\
       }]\
@@ -2277,6 +2300,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./",\
         "packageDependencies": [\
           ["nextjs-adopciones", "workspace:."],\
+          ["@next/font", "virtual:3d4bd3b9e14ff5358e4e834bad6ff1b93017383daf5c271a89da78cc55d6a6f0fdcfe7a9fd180bab2f88a2bd5a5496c600a6dedc517851b67f45b8c2bd88f901#npm:14.2.15"],\
           ["@tailwindcss/typography", "virtual:3d4bd3b9e14ff5358e4e834bad6ff1b93017383daf5c271a89da78cc55d6a6f0fdcfe7a9fd180bab2f88a2bd5a5496c600a6dedc517851b67f45b8c2bd88f901#npm:0.5.16"],\
           ["autoprefixer", "virtual:3d4bd3b9e14ff5358e4e834bad6ff1b93017383daf5c271a89da78cc55d6a6f0fdcfe7a9fd180bab2f88a2bd5a5496c600a6dedc517851b67f45b8c2bd88f901#npm:10.4.17"],\
           ["next", "virtual:3d4bd3b9e14ff5358e4e834bad6ff1b93017383daf5c271a89da78cc55d6a6f0fdcfe7a9fd180bab2f88a2bd5a5496c600a6dedc517851b67f45b8c2bd88f901#npm:14.2.5"],\

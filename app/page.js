@@ -1,57 +1,64 @@
 'use client';
+import { useState } from 'react';
 import Link from 'next/link';
 import Header from '../components/Header';
 import Carousel from '../components/Carousel';
 
 export default function HomePage() {
+  const [selectedDepartment, setSelectedDepartment] = useState(null);
+
   const images = [
-    "https://placekitten.com/800/400",
-    "https://placedog.net/800/400?id=10",
-    "https://placebear.com/800/400",
-    "https://placehold.co/800x400/87CEEB/ffffff?text=Adopta+un+amigo",
-    "https://placehold.co/800x400/FFD700/000000?text=Familia+y+Amor"
+    "/slider/perrito1.jpeg",
+    "/slider/perrito2.jpeg"
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50">
-      <Header onRefresh={() => {}} />
+    <div className="min-h-screen bg-gray-50 flex flex-col">
+      {/* Header fijo opcional */}
+      <Header
+        onRefresh={() => {}}
+        selectedDepartment={selectedDepartment}
+        onDepartmentChange={setSelectedDepartment}
+      />
 
-      <main className="max-w-7xl mx-auto px-4 py-12 text-center">
-        <h1 className="text-5xl font-extrabold text-gray-900 mb-6 leading-tight">
-          ¡Bienvenido a Adopciones Caninas!
+      <main className="flex-1 max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-12 text-center">
+        {/* Hero */}
+        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold font-serif text-gray-900 mb-6 leading-tight tracking-tight">
+          ¡Bienvenido a <span className="text-green-600">Adopciones Caninas</span>!
         </h1>
-        <p className="text-xl text-gray-700 mb-8 max-w-3xl mx-auto">
+        <p className="text-lg sm:text-xl font-medium text-gray-700 mb-10 max-w-3xl mx-auto leading-relaxed">
           Dale una oportunidad a un nuevo amigo 🐶. Explora nuestra lista de perritos esperando un hogar lleno de amor.
         </p>
 
         {/* Carrusel */}
-        <div className="mb-10">
+        <div className="mb-12 max-w-4xl mx-auto shadow-lg rounded-xl overflow-hidden">
           <Carousel images={images} interval={4000} />
         </div>
 
+        {/* CTA principal */}
         <Link
           href="/adopcion"
-          className="inline-block bg-green-600 text-white px-8 py-4 rounded-lg text-2xl font-bold hover:bg-green-700 transition-colors shadow-lg"
+          className="inline-block bg-green-600 text-white px-8 py-4 rounded-xl text-xl sm:text-2xl font-bold hover:bg-green-700 hover:scale-105 transition-all shadow-md"
         >
           Ver Perritos en Adopción →
         </Link>
 
-        <div className="mt-16 text-gray-600 text-lg max-w-4xl mx-auto">
-          <p className="mb-4">
-            Nuestra misión es conectar a perritos sin hogar con familias amorosas.
-            Cada adopción es una historia de esperanza y un nuevo comienzo 🏡.
+        {/* Sección descriptiva */}
+        <div className="mt-20 text-gray-700 text-lg max-w-4xl mx-auto leading-relaxed">
+          <p className="mb-5">
+            Nuestra misión es <span className="font-semibold text-green-700">conectar a perritos sin hogar</span> 
+            con familias amorosas en todo el Perú 🇵🇪.
           </p>
           <p>
-            Trabajamos con refugios y voluntarios para asegurar que cada perrito
-            reciba el cuidado y la atención que necesita antes de encontrar su hogar definitivo.
+            Trabajamos con refugios, rescatistas y voluntarios en diferentes departamentos 
+            para asegurar que cada perrito encuentre un hogar definitivo 🏡✨.
           </p>
         </div>
       </main>
 
-      <footer className="bg-white border-t py-6 mt-12">
-        <p className="text-center text-gray-500 text-sm">
-          💙 Hecho con amor para nuestros perritos adoptados
-        </p>
+      {/* Footer sencillo */}
+      <footer className="bg-gray-100 py-6 text-gray-500 text-sm text-center mt-12">
+        © {new Date().getFullYear()} Adopciones Caninas · Hecho con ❤️ en Perú
       </footer>
     </div>
   );

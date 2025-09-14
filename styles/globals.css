@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Opcional: custom styles */
-body {
-  @apply bg-gray-50 text-gray-800;
+/* opcional: reset */
+html, body {
+  @apply font-sans;
 }

@@ -1,39 +1,49 @@
 'use client';
 import Link from 'next/link';
+import DepartmentSelector from './DepartmentSelector';
 
-export default function Header({ onRefresh }) {
+export default function Header({ onRefresh, selectedDepartment, onDepartmentChange }) {
   return (
-    <header className="bg-white shadow-sm sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
-        {/* Logo y título */}
-        <Link href="/" className="flex items-center space-x-2">
-          <span className="text-3xl">🐕</span>
-          <div>
-            <h1 className="text-xl font-bold text-gray-900">Adopciones Caninas</h1>
-            <p className="text-sm text-gray-600">Encuentra a tu nuevo mejor amigo</p>
-          </div>
-        </Link>
+    <header className="sticky top-0 z-50 bg-gradient-to-r from-teal-500 via-sky-500 to-blue-600 shadow-lg">
+      <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+        
+        {/* Logo + Título + Departamento */}
+        <div className="flex items-center gap-5">
+          <Link href="/" className="flex items-center space-x-2">
+            <span className="text-4xl">🐕</span>
+            <h1 className="text-2xl font-extrabold text-white tracking-wide drop-shadow">
+              Adopciones Caninas
+            </h1>
+          </Link>
 
-        {/* Menú de navegación */}
-        <nav className="hidden md:flex space-x-6 text-gray-700 font-medium">
-          <Link href="/" className="hover:text-blue-600 transition-colors">
-            Inicio
+          {/* Selector de departamento */}
+          <DepartmentSelector 
+            selectedDepartment={selectedDepartment}
+            onDepartmentChange={onDepartmentChange}
+          />
+        </div>
+
+        {/* Navegación */}
+        <nav className="flex items-center space-x-6">
+          <Link 
+            href="/adopcion" 
+            className="text-white/90 hover:text-yellow-200 font-semibold transition-colors"
+          >
+            🐶 Perritos
           </Link>
-          <Link href="/adopcion" className="hover:text-blue-600 transition-colors">
-            Adopciones
+          <Link 
+            href="/contacto" 
+            className="text-white/90 hover:text-yellow-200 font-semibold transition-colors"
+          >
+            📩 Contáctanos
           </Link>
-          <Link href="/about" className="hover:text-blue-600 transition-colors">
-            Nosotros
+          <Link 
+            href="/organizaciones" 
+            className="bg-yellow-300 text-gray-900 px-4 py-2 rounded-lg font-semibold hover:bg-yellow-400 transition"
+          >
+            🏥 Registrar Organización
           </Link>
         </nav>
-
-        {/* Botón de refrescar */}
-        <button
-          onClick={onRefresh}
-          className="ml-4 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition"
-        >
-          🔄 Actualizar
-        </button>
       </div>
     </header>
   );

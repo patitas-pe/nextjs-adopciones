@@ -1,21 +1,17 @@
-/** @type {import('tailwindcss').Config} */
+// tailwind.config.js
 module.exports = {
   content: [
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     extend: {
-      colors: {
-        brand: {
-          light: "#93c5fd", // azul claro
-          DEFAULT: "#3b82f6", // azul principal
-          dark: "#1e3a8a", // azul oscuro
-        },
+      fontFamily: {
+        sans: ["var(--font-poppins)", "sans-serif"],      // Poppins para textos
+        serif: ["var(--font-merriweather)", "serif"],     // Merriweather para títulos
       },
     },
   },
-  plugins: [require('@tailwindcss/typography')],
+  plugins: [],
 }

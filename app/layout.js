@@ -1,14 +1,27 @@
-import './../styles/globals.css';
+import './../styles/globals.css'
+import { Poppins, Merriweather } from 'next/font/google' // 👈 Importas ambas fuentes
+
+const poppins = Poppins({
+  subsets: ['latin'],
+  weight: ['400','500','600','700','800'],
+  variable: '--font-poppins',
+})
+
+const merriweather = Merriweather({
+  subsets: ['latin'],
+  weight: ['400','700'],
+  variable: '--font-merriweather'
+})
 
 export const metadata = {
-  title: "🐶 Adopciones Caninas",
-  description: "Plataforma de adopción de perritos usando GitHub Issues",
-};
+  title: "Adopciones Caninas",
+  description: "Plataforma comunitaria para adopción de perritos en Perú",
+}
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="es">
-      <body className="min-h-screen bg-gray-50 font-sans antialiased">
+    <html lang="es" className={`${poppins.variable} ${merriweather.variable}`}> {/* 👈 Ambas variables */}
+      <body className="font-sans bg-gray-50">
         {children}
       </body>
     </html>

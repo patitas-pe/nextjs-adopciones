@@ -4,7 +4,7 @@ import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import Link from 'next/link';
 
-export default function DogCard({ dog }) {
+export default function DogCard({ dog, department }) {
   // Optimización: calcular labelNames una sola vez
   const labelNames = React.useMemo(() => 
     (dog.labels || []).map(l => (l.name || '')
@@ -65,18 +65,9 @@ export default function DogCard({ dog }) {
       <div className="p-5 flex-grow flex flex-col">
         <h3 className="font-bold text-lg text-gray-900 mb-2 line-clamp-2">{dog.title}</h3>
 
-        {/* Render resumen markdown (recortado) */}
-        <div className="prose prose-sm text-gray-700 mb-4 max-h-24 overflow-hidden">
-          <div className="line-clamp-3">
-            <ReactMarkdown remarkPlugins={[remarkGfm]}>
-              {dog.body || 'Sin descripción'}
-            </ReactMarkdown>
-          </div>
-        </div>
-
         {/* Botón para ver detalle */}
         <Link 
-          href={`/adopcion/${dog.number}`} 
+          href={`/adopcion/${department}/${dog.number}`} 
           className="mt-auto text-blue-600 hover:underline font-medium inline-flex items-center"
         >
           Ver más detalles →
