@@ -27,6 +27,7 @@ const RAW_RUNTIME_STATE =
       [null, {\
         "packageLocation": "./",\
         "packageDependencies": [\
+          ["@heroicons/react", "virtual:3d4bd3b9e14ff5358e4e834bad6ff1b93017383daf5c271a89da78cc55d6a6f0fdcfe7a9fd180bab2f88a2bd5a5496c600a6dedc517851b67f45b8c2bd88f901#npm:2.2.0"],\
           ["@next/font", "virtual:3d4bd3b9e14ff5358e4e834bad6ff1b93017383daf5c271a89da78cc55d6a6f0fdcfe7a9fd180bab2f88a2bd5a5496c600a6dedc517851b67f45b8c2bd88f901#npm:14.2.15"],\
           ["@tailwindcss/typography", "virtual:3d4bd3b9e14ff5358e4e834bad6ff1b93017383daf5c271a89da78cc55d6a6f0fdcfe7a9fd180bab2f88a2bd5a5496c600a6dedc517851b67f45b8c2bd88f901#npm:0.5.16"],\
           ["autoprefixer", "virtual:3d4bd3b9e14ff5358e4e834bad6ff1b93017383daf5c271a89da78cc55d6a6f0fdcfe7a9fd180bab2f88a2bd5a5496c600a6dedc517851b67f45b8c2bd88f901#npm:10.4.17"],\
@@ -46,6 +47,28 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "../../.yarn/berry/cache/@alloc-quick-lru-npm-5.2.0-eb83517088-10c0.zip/node_modules/@alloc/quick-lru/",\
         "packageDependencies": [\
           ["@alloc/quick-lru", "npm:5.2.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@heroicons/react", [\
+      ["npm:2.2.0", {\
+        "packageLocation": "../../.yarn/berry/cache/@heroicons-react-npm-2.2.0-775299dcc0-10c0.zip/node_modules/@heroicons/react/",\
+        "packageDependencies": [\
+          ["@heroicons/react", "npm:2.2.0"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["virtual:3d4bd3b9e14ff5358e4e834bad6ff1b93017383daf5c271a89da78cc55d6a6f0fdcfe7a9fd180bab2f88a2bd5a5496c600a6dedc517851b67f45b8c2bd88f901#npm:2.2.0", {\
+        "packageLocation": "./.yarn/__virtual__/@heroicons-react-virtual-30a2e1755e/3/.yarn/berry/cache/@heroicons-react-npm-2.2.0-775299dcc0-10c0.zip/node_modules/@heroicons/react/",\
+        "packageDependencies": [\
+          ["@heroicons/react", "virtual:3d4bd3b9e14ff5358e4e834bad6ff1b93017383daf5c271a89da78cc55d6a6f0fdcfe7a9fd180bab2f88a2bd5a5496c600a6dedc517851b67f45b8c2bd88f901#npm:2.2.0"],\
+          ["@types/react", null],\
+          ["react", "npm:18.2.0"]\
+        ],\
+        "packagePeers": [\
+          "@types/react",\
+          "react"\
         ],\
         "linkType": "HARD"\
       }]\
@@ -2300,6 +2323,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./",\
         "packageDependencies": [\
           ["nextjs-adopciones", "workspace:."],\
+          ["@heroicons/react", "virtual:3d4bd3b9e14ff5358e4e834bad6ff1b93017383daf5c271a89da78cc55d6a6f0fdcfe7a9fd180bab2f88a2bd5a5496c600a6dedc517851b67f45b8c2bd88f901#npm:2.2.0"],\
           ["@next/font", "virtual:3d4bd3b9e14ff5358e4e834bad6ff1b93017383daf5c271a89da78cc55d6a6f0fdcfe7a9fd180bab2f88a2bd5a5496c600a6dedc517851b67f45b8c2bd88f901#npm:14.2.15"],\
           ["@tailwindcss/typography", "virtual:3d4bd3b9e14ff5358e4e834bad6ff1b93017383daf5c271a89da78cc55d6a6f0fdcfe7a9fd180bab2f88a2bd5a5496c600a6dedc517851b67f45b8c2bd88f901#npm:0.5.16"],\
           ["autoprefixer", "virtual:3d4bd3b9e14ff5358e4e834bad6ff1b93017383daf5c271a89da78cc55d6a6f0fdcfe7a9fd180bab2f88a2bd5a5496c600a6dedc517851b67f45b8c2bd88f901#npm:10.4.17"],\
