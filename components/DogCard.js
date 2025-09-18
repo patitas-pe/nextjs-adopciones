@@ -22,7 +22,7 @@ export default function DogCard({ dog, department }) {
 
   const getStatusText = () => {
     if (labelNames.includes("adoptado")) return 'Adoptado ✅';
-    if (labelNames.includes("en adopcion")) return 'Disponible 🐕';
+    if (labelNames.includes("en adopcion")) return 'En adopción 🐾';
     return 'Sin estado';
   };
 

@@ -10,7 +10,7 @@ import {
   XMarkIcon,
 } from '@heroicons/react/24/outline';
 
-export default function Header({ onRefresh, selectedDepartment, onDepartmentChange }) {
+export default function Header({ onRefresh }) {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
@@ -40,7 +40,6 @@ export default function Header({ onRefresh, selectedDepartment, onDepartmentChan
 
         {/* Desktop nav */}
         <nav className="hidden md:flex items-center gap-4">
-          {/* Botón directo a organizaciones */}
           <Link 
             href="/organizaciones" 
             className="flex items-center gap-1 text-white/90 hover:text-yellow-200 font-semibold transition-colors"
@@ -57,11 +56,9 @@ export default function Header({ onRefresh, selectedDepartment, onDepartmentChan
             <span>Contáctanos</span>
           </Link>
 
+          {/* Selector de departamento con estado global */}
           <div className="ml-4">
-            <DepartmentSelector 
-              selectedDepartment={selectedDepartment}
-              onDepartmentChange={onDepartmentChange}
-            />
+            <DepartmentSelector />
           </div>
         </nav>
 
@@ -93,11 +90,10 @@ export default function Header({ onRefresh, selectedDepartment, onDepartmentChan
             <EnvelopeIcon className="w-5 h-5" />
             Contáctanos
           </Link>
+
+          {/* Selector en mobile */}
           <div className="pt-2 border-t border-gray-200">
-            <DepartmentSelector 
-              selectedDepartment={selectedDepartment}
-              onDepartmentChange={onDepartmentChange}
-            />
+            <DepartmentSelector />
           </div>
         </div>
       )}
