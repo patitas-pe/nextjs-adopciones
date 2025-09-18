@@ -7,7 +7,7 @@ import {
   BuildingStorefrontIcon, 
   EnvelopeIcon, 
   Bars3Icon, 
-  XMarkIcon 
+  XMarkIcon,
 } from '@heroicons/react/24/outline';
 
 export default function Header({ onRefresh, selectedDepartment, onDepartmentChange }) {
@@ -40,6 +40,7 @@ export default function Header({ onRefresh, selectedDepartment, onDepartmentChan
 
         {/* Desktop nav */}
         <nav className="hidden md:flex items-center gap-4">
+          {/* Botón directo a organizaciones */}
           <Link 
             href="/organizaciones" 
             className="flex items-center gap-1 text-white/90 hover:text-yellow-200 font-semibold transition-colors"

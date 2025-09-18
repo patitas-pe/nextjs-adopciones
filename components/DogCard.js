@@ -67,7 +67,7 @@ export default function DogCard({ dog, department }) {
 
         {/* Botón para ver detalle */}
         <Link 
-          href={`/adopcion/${department}/${dog.number}`} 
+          href={`/adopciones/${department}/${dog.number}`} 
           className="mt-auto text-blue-600 hover:underline font-medium inline-flex items-center"
         >
           Ver más detalles →

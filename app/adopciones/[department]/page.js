@@ -4,6 +4,7 @@ import DogCard from '../../../components/DogCard';
 import LoadingSpinner from '../../../components/LoadingSpinner';
 import ErrorMessage from '../../../components/ErrorMessage';
 import Header from '../../../components/Header';
+import Link from 'next/link';
 
 const DEPARTMENTS = {
     ayacucho: { name: 'Ayacucho', repo: 'patitas-pe/adopciones-ayacucho' },
@@ -25,9 +26,19 @@ export default function AdopcionDepartmentPage({ params }) {
             />
 
             <main className="max-w-7xl mx-auto px-4 py-6">
-                <h1 className="text-3xl font-bold text-gray-900 mb-8">
-                    🐶 Perritos en {dept.name}
-                </h1>
+                <div className="flex items-center justify-between mb-8">
+                    <h1 className="text-3xl font-bold text-gray-900">
+                        🐶 Perritos en {dept.name}
+                    </h1>
+
+                    {/* Botón de poner en adopción */}
+                    <Link
+                        href={`/adopciones/${department}/poner-en-adopcion`}
+                        className="inline-flex items-center px-5 py-2.5 rounded-lg bg-green-600 text-white text-sm font-medium shadow hover:bg-green-700 transition-colors"
+                    >
+                        ➕ Poner en adopción
+                    </Link>
+                </div>
 
                 {loading ? (
                     <LoadingSpinner />

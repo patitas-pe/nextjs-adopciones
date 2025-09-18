@@ -16,7 +16,7 @@ export default function DepartmentSelector({ selectedDepartment }) {
   const handleSelect = (slug) => {
     setOpen(false);
     if (slug && slug !== selectedDepartment?.slug) {
-      router.push(`/adopcion/${slug}`);
+      router.push(`/adopciones/${slug}`);
     }
   };
 
@@ -29,7 +29,7 @@ export default function DepartmentSelector({ selectedDepartment }) {
         className="inline-flex items-center gap-2 bg-white/20 hover:bg-white/30 text-white px-3 py-2 rounded-lg text-sm font-semibold shadow transition"
       >
         <MapPinIcon className="h-5 w-5 text-yellow-300" />
-        {selectedDepartment?.name || "Selecciona"}
+        {selectedDepartment?.name || "Adopciones en ..."}
         <ChevronDownIcon
           className={`h-4 w-4 transition-transform ${open ? "rotate-180" : ""}`}
         />
